@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{3C307282-0F4B-4AD0-AD15-AFF6E52BF96E}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Projmvvm_FlowerOnline</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Database.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interface\IHoaRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interface\ILoaihoaRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Hoa.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Loaihoa.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\HoaRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\LoaihoaRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HoaViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoaihoaViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ThemHoaViewMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\PageHoa.xaml.cs">
+      <DependentUpon>PageHoa.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\PageInsertLoaihoa.xaml.cs">
+      <DependentUpon>PageInsertLoaihoa.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\PageThemHoa.xaml.cs">
+      <DependentUpon>PageThemHoa.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PageInsertLoaihoa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Behaviors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PageThemHoa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PageHoa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

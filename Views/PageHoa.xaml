@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmode="clr-namespace:Projmvvm_FlowerOnline.ViewModels"
+             x:Class="Projmvvm_FlowerOnline.Views.PageHoa">
+    <ContentPage.BindingContext>
+        <viewmode:ThemHoaViewMode/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker ItemsSource="{Binding Loaihoas}" 
+                    SelectedItem="{Binding LoaihoaChon ,Mode=TwoWay}" ItemDisplayBinding="{Binding Tenloai}" />
+            <ListView ItemsSource="{Binding  DSHOA}" SelectedItem="{Binding Hoamoi, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell ImageSource="{Binding Hinh}" Text="{Binding Tenhoa}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
